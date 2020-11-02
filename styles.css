@@ -1,147 +1,175 @@
 main {
-	padding: 60px;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvitca Neue", Arial, "Noto Sans", sans-serif;
+	font-size: 18px;
 }
 
-
-header{
-  text-align:left;
-  font-size: 18px;
-  padding-left: 130px;
+header {
+	background-color: white;
+	font-size: 18px;
 }
 
-
+header li{
+	color: #6b7280;
+	font-weight: bold;
+	padding:1%; 
+ }
+ 
+header .container{
+	display: grid;
+	grid:"item item2";
+	align-items: center;
+}
 header h1{
-	font-size: 18px;
-	
+	grid-area: item;
+	font-size:18px;
 }
-
-a{
-	color: #6B7280;
-	font-size: 18px;
-	text-decoration: none;
-	
-}
-
-	
-a:hover {
-  color: #5A67D8;
-}
-
-
-
-header li {
-	float: right ; 
-	text-decoration: none; 
+header ul{
+	display: flex;
+	flex-direction: row;
 	list-style-type: none;
-	color: #6B7280;
-	padding-left: 10px;
-	
-	
+	grid-area: item2;
 }
 
+ a{
+	text-decoration: none;
+	color: #6B7280; 
+ }
+
+a:hover{
+	color: #5A67D8;
+}
 
 .overview-hero{
-	font-size: 18px;
-	color: #00000;
 	background-color: #E2E8F0;
-	padding-right: 100px; 
-	padding:10px;
 }
 
-.overview-hero-image{
-	float: left;
-	margin: 10px;
-	padding-left: 90px;
-	
-}
-
-.cards {
+.overview-hero .container{
 	display: grid;
-	grid-template-columns: repeat(3, minmax(150px, 1fr));
-	grid-gap: 20px;
-	align-content: center;margin-left: 50px;
+	grid:"item4 item5";
+	align-items: center;
+
 }
 
-
-.card {
-	border: 1px solid #E2E8F0;
-	border-radius: 5px;
-	padding: .5reml
-	box-shadow: 2px 2px 6px 0px rgba(0,0,0,0,.3);
+.overview-hero img{
+	grid-area: item4;
+	width: 200px;
 }
-
-
-.card img  {
-	max-width: 100px;
-
-	
+.overview-hero .overview-hero-text{
+	grid-area: item5;
+	width:500px;
 }
-
-.card h3  {
-	color: #48BB78;
-	font-size: 21px;
-	margin: 5px;
-}
-.card p  {
-	padding:0px;
-	margin: 0px;
-}
-
 
 .learn-about h2{
-	font-size: 18px;
+	font-size: 24px;
 	color: #48BB78;
+}
+
+.learn-about .card {
+	border-color: #E2E8F0;
+	border-radius: 5px;
+	box-shadow: 8px 8px 10px grey;
+	padding:2em;
+	width:200px;
+	height:430px;
+}
+
+.learn-about img{
+	width:200px;
+	height:200px;
+}
+
+
+
+.learn-about h3{
+	color: #48BB78;
+	font-size: 21px;
+	margin-bottom:0px;
+}
+
+
+.learn-about{
+	display:grid;
+	grid: "item1 item2 item3";
+	padding:2em;
+	padding-left:180px;
+	grid-template-columns: auto;
+}
+
+.cards{
+	display:grid;
+	grid: "item1 item2 item3";
+	padding:2em;
+	padding-left:0px;
+	grid-template-columns: auto;
+}
+
+.testing .container{
+	display:grid;
+	grid:"item5 item6";
+	align-items: center;
+}
+.testing .btn{
+	grid-area: item6;
+	float:right;
+	margin: 50px;
+	text-align:center;
+}
+.testing .testing-desciption{
+	grid-area:item5 ;
+	float:left;
+}
+.testing{
+	background-color: #4A5568;
+	color: white;
+	padding:25px;
+
 }
 
 .testing a{
-	padding: 14px 15px;
 	background-color: #48BB78;
-	color: white;
-	display: inline-block;
-	
-}
-
-.testing{
-	font-size: 18px;
-	color: #00000;
-	background-color: #4A5568;
+	border-radius: 5px;
+	text-decoration: none;
 	color:white;
-	padding-left: 100px; 
-	padding:10px;
-	text-align:left;
+	padding:15px;
+	width:150px;
 }
 
-.stories img{
-	border-radius: 50%;
-	display: block;
-	float:left;
-	padding-right:10px;
-	padding-bottom:10px;
-}
-
-.stories a{
-	color:#5A67D8;
-	font-size: 18px;
+.testing img{
+	width: 200px;
+	height: 200px;
 }
 
 .stories h2{
 	color:#5A67D8;
+	float:right;
+	margin:20px;
+	align-content: center;
+}
+
+.stories a{
+	color: #5A67D8;
+	text-decoration:none;
 }
 
 
+.stories img{
+	border-radius: 50%;
+	float:left;
+	margin:20px;
+	width:150px;
+	height:150px;
+	align-content: center;
+}
 
-.newsletter{
-	font-size: 18px;
+.newsletter {
 	background-color: #48BB78;
-	color:white;
-	padding-left: 100px; 
-	padding:10px;
-	text-align:center;
+	color: #ffffff;
+	align-content: center;
 }
 
-.newsletter h3{
-	color:white;
+.newsletter .container{
+	width:400px;
+	align-items: center;
 }
 
 .btn{
@@ -149,12 +177,55 @@ header li {
 	background-color: #5A67D8;
 	color: white;
 	display: inline-block;
-	
+	border-radius: 4px;
+	border-color:none;
+	box-sizing: border-box;
+	cursor: pointer;
 }
+
+form{
+	display: grid;
+	grid: "item2 item3";
+}
+
+form input{
+	grid-area:item2;
+	margin:15px;
+	margin-right:1px;
+	width:220px;
+	height:35px;
+	border-radius: 5px;
+}
+
+form Button{
+	grid-area:item3;
+	margin: 15px;
+	margin-left:1px;
+	padding:15px;
+	width:180px;
+	height:40px;
+}
+
 
 footer{
 	background-color: #4A5568;
-	color: #FFFFFF;
-	display: flex; 
-	padding-left: 40px;
+	color: white;
 }
+
+.container {
+    margin: auto;
+    max-width: 1000px;
+	width: 100%;
+	display:flex;
+	flex-direction: column;
+
+
+}
+
+
+
+
+
+
+
+
